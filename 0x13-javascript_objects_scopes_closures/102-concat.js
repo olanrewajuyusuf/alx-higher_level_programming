@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const {writeFile, readFileSync} = require('fs');
-const {argv} = require('process');
+const { writeFile, readFileSync } = require('fs');
+const { argv } = require('process');
 
 const getContent = (file) => {
   return readFileSync(file, 'utf8');
