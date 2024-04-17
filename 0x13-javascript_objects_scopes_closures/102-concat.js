@@ -3,9 +3,12 @@
 const {writeFile, readFileSync} = require('fs');
 const {argv} = require('process');
 
-const fileA = readFileSync(argv[2], 'utf8');
-const fileB = readFileSync(argv[3], 'utf8');
+const getContent = (file) => {
+  return readFileSync(file, 'utf8');
+};
 
-writeFile(argv[4], `${fileA} ${fileB}`, 'utf8', err => {
+const concat = getContent(argv[2]) + '' + getContent(argv[3]);
+
+writeFile(argv[4], concat, 'utf8', err => {
   if (err) throw err;
 });
