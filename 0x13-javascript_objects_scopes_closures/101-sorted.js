@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const dict = require('./101-sorted.js').dict;
+const dict = require('./101-data.js').dict;
 
 const vals = Object.values(dict);
 const keys = Object.keys(dict);
