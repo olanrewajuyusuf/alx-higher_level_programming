@@ -1,4 +1,4 @@
-#!/usr/bin/python 3
+#!/usr/bin/python3
 
 """Creating a base model"""
 class Base:
@@ -18,8 +18,8 @@ class Base:
         and assign the value to the public instance
         attribute id
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id =Base. __nb_objects
+            self.id = Base.__nb_objects
