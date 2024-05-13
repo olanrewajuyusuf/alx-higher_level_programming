@@ -1,6 +1,6 @@
 #!/usr/bin/python 3
 
-"""Creating a base class"""
+"""Creating a base model"""
 class Base:
 
     """adding a private class attribute"""
