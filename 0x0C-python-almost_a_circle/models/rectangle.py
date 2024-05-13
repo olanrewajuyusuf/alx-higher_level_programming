@@ -18,9 +18,9 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    """Creating getter and setter for width"""
     @property
     def width(self):
+        """Creating getter and setter for y"""
         return self.__width
 
     @width.setter
@@ -31,9 +31,9 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = width
 
-    """Creating getter and setter for height"""
     @property
     def height(self):
+        """Creating getter and setter for height"""
         return self.__height
 
     @height.setter
@@ -44,9 +44,9 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = height
 
-    """Creating getter and setter for x"""
     @property
     def x(self):
+        """Creating getter and setter for x"""
         return self.__x
 
     @x.setter
@@ -57,9 +57,9 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = x
 
-    """Creating getter and setter for y"""
     @property
     def y(self):
+        """Creating getter and setter for y"""
         return self.__y
 
     @y.setter
@@ -69,3 +69,7 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        """difining the area of the rectangle"""
+        return self.__width * self.__height
