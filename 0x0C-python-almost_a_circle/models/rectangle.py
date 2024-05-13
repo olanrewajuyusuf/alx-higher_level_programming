@@ -76,8 +76,30 @@ class Rectangle(Base):
 
     def display(self):
         """display method of rectangle with char #"""
+
+        """handling position on y axis"""
+        for _ in range(self.y):
+            print()
+
         for i in range(self.__height):
+            """Handling the position of # on x axis"""
+            print(' ' * self.__x, end='')
+            """print # rectangle"""
             print("#" * self.__width)
+
+    def update(self, *args):
+        """update method assigns arguments to each attribute."""
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
 
     def __str__(self):
         """__str__ method to override the class"""
