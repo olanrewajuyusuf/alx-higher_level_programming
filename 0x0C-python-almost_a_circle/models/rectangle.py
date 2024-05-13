@@ -8,14 +8,15 @@ class Rectangle(Base):
 
     """Creating private instance attributes"""
     def __init__(self, width, height, x=0, y=0, id=None):
+
         """calling the super class with id"""
-        Base.__init__(self, id)
+        super().__init__(id)
 
         """assigning values to private instance attributes"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     """Creating getter and setter for width"""
     @property
