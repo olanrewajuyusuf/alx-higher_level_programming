@@ -4,15 +4,22 @@
 from .base import Base 
 
 """Creating a Rectangle model that inherits from Base"""
-class Rectangle(Base):
 
-    """Creating private instance attributes"""
+class Rectangle(Base):
+    """Represent a rectangle"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialize a new Rectangle.
+
+        Args:
+            width: the width of the rectangle
+            height: the height of the rectangle
+            x: x axis if the rectangle
+            y: y axis of the rectangle
+        """
 
         """calling the super class with id"""
         super().__init__(id)
-
-        """assigning values to private instance attributes"""
         self.width = width
         self.height = height
         self.x = x

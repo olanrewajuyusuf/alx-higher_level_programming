@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-
 """Creating a base model"""
-class Base:
 
-    """adding a private class attribute"""
+class Base:
+    """adding a private class attribute
+
+    Attrributes:
+        __nb_objects (int): the number of objects
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
