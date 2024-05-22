@@ -10,4 +10,4 @@ writeFile(file, text, (err, result) => {
     console.log(err);
     return;
   }
-})
+});
