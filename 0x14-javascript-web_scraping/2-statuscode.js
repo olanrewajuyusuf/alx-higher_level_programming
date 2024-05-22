@@ -2,7 +2,7 @@
 const request = require('request');
 
 request
-  .get('http://google.com/img.png')
+  .get(process.argv[2])
   .on('response', function(response) {
-    console.log(response.statusCode);
+    console.log(`code: ${response.statusCode}`);
   });
