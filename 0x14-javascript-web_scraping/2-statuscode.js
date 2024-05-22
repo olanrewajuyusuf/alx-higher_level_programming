@@ -1,6 +1,8 @@
 #!/usr/bin/node
 const request = require('request');
 
-request(process.argv[2], function (error, response, body) {
-  console.log('code:', response && response.statusCode);
-});
+request
+  .get('http://google.com/img.png')
+  .on('response', function(response) {
+    console.log(response.statusCode);
+  });
