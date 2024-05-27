@@ -2,4 +2,6 @@
 
 const request = require('request');
 
-request.get(
+request('https://swapi-api.alx-tools.com/api/films/:id', function (error, response, body) {
+  console.log(error || JSON.parse(body).title);
+});
