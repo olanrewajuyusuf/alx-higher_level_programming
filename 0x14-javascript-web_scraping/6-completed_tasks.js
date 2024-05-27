@@ -18,7 +18,7 @@ request(process.argv[2], function (error, response, body) {
 	}
       });
 
-      const res = `{${Object.entries(completed).map(([key, value]) => ` '${key}': ${value}`).join(',n ')} }`;
+      const res = `{${Object.entries(completed).map(([key, value]) => ` '${key}': ${value}`).join(',\n ')} }`;
       console.log(Object.keys(completed).length > 2 ? res : completed);
     } catch (parseError) {
       console.error('Error parsing JSON:', parseError);
